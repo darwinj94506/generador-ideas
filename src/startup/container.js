@@ -15,7 +15,7 @@ const { HomeRoutes } = require("../routes/index.routes");
 const Routes = require("../routes"); 
 
 //models 
-const { comment, idea, user} = require('../models');
+const { Comment, Idea, User } = require('../models');
 
 const { CommentRepository, IdeaRepository, UserRepository} = require("../repositores");
 
