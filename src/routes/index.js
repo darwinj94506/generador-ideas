@@ -20,11 +20,11 @@ module.exports = function({HomeRoutes,
         .use(cors())
         .use(helmet())
         .use(compression());
-    apiRoutes.use("/home",[AuthMiddleware] ,HomeRoutes);
+    apiRoutes.use("/home",HomeRoutes);
     apiRoutes.use("/user", UserRoutes);
     apiRoutes.use("/idea", IdeaRoutes);
     apiRoutes.use("/comment", CommentRoutes);
-    apiRoutes.use("/auth", AuthRoutes);
+    // apiRoutes.use("/auth", AuthRoutes);
 
     router.use("/v1/api", apiRoutes);
 

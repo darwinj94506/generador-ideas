@@ -7,8 +7,9 @@ class UserService extends BaseService{
         super(UserRepository);
         _userRepository = UserRepository;
     }
-
+    
     async getUserByUserName(username){
+        console.log(JSON.stringify(_userRepository))
         return await _userRepository.getUserByUserName(username)
     }
 

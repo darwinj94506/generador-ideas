@@ -1,6 +1,6 @@
 class BaseService{
     constructor(repository){
-        this.repositori = repository;
+        this.repository = repository;
     }
 
     async get(id){
@@ -45,7 +45,7 @@ class BaseService{
             error.message = "id must be sent"
             throw error;
         }
-        return await this.repository.delete(id, entity);
+        return await this.repository.delete(id);
     }
 
 
